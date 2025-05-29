@@ -4,9 +4,11 @@
 
 @theme {
   --color-primary: rgb(136, 239, 27);
-  --color-foreground: rgb(19, 19, 19);
-  --color-foreground-variant: rgb(172, 172, 172);
+  --color-foreground-1: rgb(19, 19, 19);
+  --color-foreground-2: rgb(172, 172, 172);
+  --color-foreground-3: rgb(119, 119, 119);
   --color-surface-1: rgb(255, 255, 255);
+  --color-surface-2: rgb(240, 240, 240);
 }
 
 body {
