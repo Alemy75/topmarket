@@ -12,3 +12,11 @@ openButton.addEventListener('click', () => {
 closeButton.addEventListener('click', () => {
   sidebar.classList.add('translate-x-[-100%]');
 });
+
+const links = document.querySelectorAll('#sidebar-link');
+
+links.forEach((link) => {
+  link.addEventListener('click', (e) => {
+    sidebar.classList.add('translate-x-[-100%]');
+  });
+});
