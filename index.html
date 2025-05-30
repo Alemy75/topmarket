@@ -805,7 +805,7 @@
           class="mt-12 w-full max-w-[1280px] max-lg:mt-6 max-lg:overflow-auto"
         >
           <div
-            class="grid w-full grid-cols-3 grid-rows-1 gap-6 max-lg:w-[1024] max-lg:gap-3 max-lg:px-6 max-md:w-[792px] max-lg:pt-3"
+            class="grid w-full grid-cols-3 grid-rows-1 gap-6 max-lg:w-[1024] max-lg:gap-3 max-lg:px-6 max-lg:pt-3 max-md:w-[792px]"
           >
             <div
               class="text-surface-1 bg-foreground-1 rounded-ss-[24px] rounded-se-[24px] px-12 py-6 max-lg:rounded-ss-[8px] max-lg:rounded-se-[8px] max-lg:p-4 max-lg:pb-3"
@@ -825,7 +825,7 @@
               class="text-surface-1 relative rounded-ss-[24px] rounded-se-[24px] bg-[linear-gradient(92.52deg,_#131313_0.08%,_#54A300_99.92%)] px-12 py-6 max-lg:rounded-ss-[8px] max-lg:rounded-se-[8px] max-lg:p-4 max-lg:pb-3"
             >
               <h3
-                class="flex items-center justify-between text-[28px] font-bold max-2xl:text-center max-lg:text-start max-lg:text-[16px] max-2xl:block"
+                class="flex items-center justify-between text-[28px] font-bold max-2xl:block max-2xl:text-center max-lg:text-start max-lg:text-[16px]"
               >
                 Только свои
 
@@ -971,12 +971,97 @@
         class="mx-auto flex max-w-[1280px] flex-col items-center max-2xl:px-6"
       >
         <h2
-          class="text-foreground-1 mt-[96px] text-[40px] leading-[28px] font-bold max-lg:mt-6 max-lg:text-[20px] max-lg:leading-[28px]"
+          class="text-foreground-1 mt-[96px] text-center text-[40px] leading-[48px] font-bold max-lg:mt-6 max-lg:text-[20px] max-lg:leading-[24px] max-lg:leading-[28px]"
         >
-          Заполните заявку на подключение
+          Заполните заявку<br />на подключение
         </h2>
 
-        <div class="mt-12 w-full max-w-[1280px] max-lg:mt-6"></div>
+        <div class="mt-12 w-full max-w-[640px] max-lg:mt-6">
+          <form action="">
+            <div
+              class="grid grid-cols-2 grid-rows-3 gap-9 max-lg:grid-cols-1 max-lg:gap-4"
+            >
+              <div class="flex flex-col gap-2 max-lg:text-[14px]">
+                <label for="name">Название компании</label>
+                <input
+                  class="placeholder-foreground-2 border-foreground-1/20 focus:outline-primary h-[54px] rounded-[12px] border-1 p-4 focus:outline-2 max-lg:h-[43px] max-lg:py-3"
+                  id="name"
+                  placeholder="ООО «Компания»"
+                />
+              </div>
+              <div class="flex flex-col gap-2 max-lg:text-[14px]">
+                <label for="inn">ИНН</label>
+                <input
+                  class="placeholder-foreground-2 border-foreground-1/20 focus:outline-primary h-[54px] rounded-[12px] border-1 p-4 focus:outline-2 max-lg:h-[43px] max-lg:py-3"
+                  id="inn"
+                  placeholder="7714698320"
+                />
+              </div>
+              <div class="flex flex-col gap-2 max-lg:text-[14px]">
+                <label for="fio">ФИО</label>
+                <input
+                  class="placeholder-foreground-2 border-foreground-1/20 focus:outline-primary h-[54px] rounded-[12px] border-1 p-4 focus:outline-2 max-lg:h-[43px] max-lg:py-3"
+                  id="fio"
+                  placeholder="Иванов Иван Иванович"
+                />
+              </div>
+              <div class="flex flex-col gap-2 max-lg:text-[14px]">
+                <label for="tarif">Тариф</label>
+
+                <div class="relative">
+                  <select
+                    id="tarif"
+                    class="text-foreground-2 border-foreground-1/20 focus:outline-primary h-[54px] w-full cursor-pointer appearance-none rounded-[12px] border p-4 pr-10 focus:outline-2 max-lg:h-[43px] max-lg:py-3"
+                  >
+                    <option disabled selected>Выбрать</option>
+                    <option value="1">Один</option>
+                    <option value="2">Два</option>
+                    <option value="3">Три</option>
+                  </select>
+
+                  <img
+                    src="/chevron.svg"
+                    alt="chevron"
+                    class="pointer-events-none absolute top-1/2 right-4 h-4 w-4 -translate-y-1/2"
+                  />
+                </div>
+              </div>
+              <div class="flex flex-col gap-2 max-lg:text-[14px]">
+                <label for="name">Телефон</label>
+                <input
+                  class="placeholder-foreground-2 border-foreground-1/20 focus:outline-primary h-[54px] rounded-[12px] border-1 p-4 focus:outline-2 max-lg:h-[43px] max-lg:py-3"
+                  id="name"
+                  placeholder="+7 (___) __-__-___"
+                />
+              </div>
+              <div class="flex flex-col gap-2 max-lg:text-[14px]">
+                <label for="name">Почта</label>
+                <input
+                  class="placeholder-foreground-2 border-foreground-1/20 focus:outline-primary h-[54px] rounded-[12px] border-1 p-4 focus:outline-2 max-lg:h-[43px] max-lg:py-3"
+                  id="name"
+                  placeholder="example@gmail.com"
+                />
+              </div>
+            </div>
+
+            <button
+              type="submit"
+              class="text-foreground-1 group bg-primary relative mt-12 h-[54px] w-full cursor-pointer overflow-hidden rounded-xl px-6 whitespace-nowrap max-lg:mt-6 max-lg:h-[43px] max-lg:rounded-lg max-lg:px-3 max-lg:text-[14px]"
+            >
+              <div
+                class="group-hover:bg-foreground-1/10 group-active:bg-foreground-1/20 group-focus:bg-foreground-1/10 absolute top-0 right-0 bottom-0 left-0 transition-all duration-150"
+              ></div>
+              Подключить
+            </button>
+
+            <p class="mt-4 text-center max-lg:mt-3 max-lg:text-[14px]">
+              Нажимая на кнопку «Отправить», вы подтверждаете
+              <a class="text-primary cursor-pointer" href="" target="_blank"
+                >согласие на обработку персональных данных</a
+              >
+            </p>
+          </form>
+        </div>
       </div>
     </section>
 
