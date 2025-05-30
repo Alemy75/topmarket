@@ -31,7 +31,7 @@
             <a
               id="sidebar-link"
               class="text-foreground-1 hover:text-primary focus:text-primary cursor-pointer text-sm font-medium whitespace-nowrap transition-all duration-150 focus:outline-none"
-              href=""
+              href="#main"
               >О проекте</a
             >
           </li>
@@ -39,7 +39,7 @@
             <a
               id="sidebar-link"
               class="text-foreground-1 hover:text-primary focus:text-primary cursor-pointer text-sm font-medium whitespace-nowrap transition-all duration-150 focus:outline-none"
-              href=""
+              href="#decision"
               >Возможности</a
             >
           </li>
@@ -110,15 +110,6 @@
           class="bg-surface-1 absolute right-6 bottom-0 left-6 flex flex-col items-stretch gap-2 pb-6"
         >
           <button
-            class="text-primary border-primary group relative h-13 cursor-pointer overflow-hidden rounded-xl border-1 px-6 whitespace-nowrap max-xl:h-[43px] max-xl:rounded-lg max-xl:px-3 max-xl:text-[14px]"
-          >
-            <div
-              class="group-hover:bg-primary/10 group-active:bg-primary/20 group-focus:bg-primary/10 absolute top-0 right-0 bottom-0 left-0 transition-all duration-150"
-            ></div>
-            В каталог
-          </button>
-
-          <button
             class="text-foreground-1 bg-primary group relative h-13 cursor-pointer overflow-hidden rounded-xl px-6 whitespace-nowrap max-xl:h-[43px] max-xl:rounded-lg max-xl:px-3 max-xl:text-[14px]"
           >
             <div
@@ -126,12 +117,22 @@
             ></div>
             В рабочий кабинет
           </button>
+
+          <button
+            class="text-primary border-primary group relative h-13 cursor-pointer overflow-hidden rounded-xl border-1 px-6 whitespace-nowrap max-xl:h-[43px] max-xl:rounded-lg max-xl:px-3 max-xl:text-[14px]"
+          >
+            <div
+              class="group-hover:bg-primary/10 group-active:bg-primary/20 group-focus:bg-primary/10 absolute top-0 right-0 bottom-0 left-0 transition-all duration-150"
+            ></div>
+            В каталог
+          </button>
         </div>
       </div>
     </aside>
 
     <!-- Header -->
     <aside
+      id="hero"
       class="bg-foreground-1 fixed top-0 left-0 z-40 h-[102px] w-full max-xl:h-12"
     >
       <div
@@ -149,14 +150,14 @@
           <li>
             <a
               class="text-surface-1/64 hover:text-primary focus:text-primary cursor-pointer font-medium whitespace-nowrap transition-all duration-150 focus:outline-none"
-              href=""
+              href="#main"
               >О проекте</a
             >
           </li>
           <li>
             <a
               class="text-surface-1/64 hover:text-primary focus:text-primary cursor-pointer font-medium whitespace-nowrap transition-all duration-150 focus:outline-none"
-              href=""
+              href="#decision"
               >Возможности</a
             >
           </li>
@@ -224,7 +225,8 @@
 
     <!-- Hero -->
     <section
-      class="mt-[102px] flex min-h-[calc(100vh-102px)] items-stretch justify-between max-2xl:flex-col max-2xl:items-center max-2xl:justify-center max-2xl:px-6 max-xl:mt-12 max-xl:min-h-[calc(100vh-48px)]"
+      id="main"
+      class="mx-auto mt-[102px] flex min-h-[calc(100vh-102px)] max-w-[1980px] items-stretch justify-between max-2xl:flex-col max-2xl:items-center max-2xl:justify-center max-2xl:px-6 max-xl:mt-12 max-xl:min-h-[calc(100vh-48px)]"
     >
       <div
         class="max-2xl: flex flex-col items-start justify-center max-2xl:items-center 2xl:pl-40"
@@ -306,6 +308,7 @@
     <!-- Decision block -->
     <section class="bg-surface-2 pb-[96px] max-lg:pb-6">
       <div
+        id="decision"
         class="mx-auto flex max-w-[1280px] flex-col items-center overflow-hidden max-2xl:px-6 max-lg:px-0"
       >
         <h2
@@ -514,7 +517,7 @@
           >
             <img class="h-12 max-lg:h-8" src="/logo-full-dark.svg" alt="" />
 
-            <p class="text-center">
+            <p class="text-center leading-[22px]">
               Сделки для внутреннего рынка, документация и контроль товарных
               потоков
             </p>
@@ -525,7 +528,7 @@
           >
             <img class="h-12 max-lg:h-8" src="/logo-export.svg" alt="" />
 
-            <p class="text-center">
+            <p class="text-center leading-[22px]">
               ВЭД и внешняя онлайн-торговля, экспорт и импорт
             </p>
           </div>
@@ -535,7 +538,7 @@
           >
             <img class="h-12 max-lg:h-8" src="/logo-logistics.svg" alt="" />
 
-            <p class="text-center">
+            <p class="text-center leading-[22px]">
               Управление складами и загрузкой, организация сборных отгрузок
             </p>
           </div>
@@ -842,7 +845,7 @@
                 Старт
               </h3>
 
-              <p class="max-2xl:text-center max-lg:hidden">
+              <p class="mt-4 max-2xl:text-center max-lg:hidden">
                 Пробный период для изучения и тестирования системы
               </p>
             </div>
@@ -865,7 +868,7 @@
                 </span>
               </h3>
 
-              <p class="max-2xl:text-center max-lg:hidden">
+              <p class="mt-4 max-2xl:text-center max-lg:hidden">
                 Для систематизации входящих заявок от клиентов и своих
                 подразделений
               </p>
@@ -880,7 +883,7 @@
                 Умные заявки
               </h3>
 
-              <p class="max-2xl:text-center max-lg:hidden">
+              <p class="mt-4 max-2xl:text-center max-lg:hidden">
                 Анализ данных товарооборота в торговой точке
               </p>
             </div>
@@ -1082,7 +1085,7 @@
 
             <p class="mt-4 text-center max-lg:mt-3 max-lg:text-[14px]">
               Нажимая на кнопку «Отправить», вы подтверждаете
-              <a class="text-primary cursor-pointer" href="" target="_blank"
+              <a class="cursor-pointer text-[#00B000]" href="" target="_blank"
                 >согласие на обработку персональных данных</a
               >
             </p>
