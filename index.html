@@ -5,10 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Топмаркет | B2B-маркетплейс полного цикла</title>
     <link rel="icon" type="image/svg+xml" href="./logo-square.svg" />
-    <script type="module" crossorigin src="./assets/index-DdHlou3P.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-DYSsXPly.css">
+    <script type="module" crossorigin src="./assets/index-kVSlWXVE.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-kt8J7i8k.css">
   </head>
   <body>
+    <aside
+      id="cookie"
+      class="bg-surface-1 border-primary fixed right-6 bottom-6 z-40 w-[400px] translate-y-[150%] rounded-2xl border-2 p-4 transition-all max-sm:left-6 max-sm:w-auto"
+    >
+      <div class="flex items-center justify-between">
+        <h3 class="font-bold">Cookie</h3>
+        <button id="cookie-close" class="text-foreground-1 cursor-pointer">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M18.7951 4.51204C18.989 4.38428 19.2522 4.40605 19.423 4.57649C19.5939 4.7474 19.6157 5.0113 19.4874 5.2054L19.423 5.28353L12.7062 12.0003L19.423 18.7171L19.4874 18.7952C19.6156 18.9893 19.5938 19.2533 19.423 19.4242C19.2521 19.5947 18.989 19.6156 18.7951 19.4876L18.716 19.4242L11.9992 12.7064L5.28333 19.4232C5.08807 19.6184 4.77155 19.6184 4.5763 19.4232C4.38138 19.2279 4.38117 18.9113 4.5763 18.7161L11.2921 11.9993L4.5763 5.28353L4.51185 5.2054C4.38381 5.01135 4.40551 4.74731 4.5763 4.57649C4.74712 4.40569 5.01115 4.38401 5.20521 4.51204L5.28333 4.57649L11.9992 11.2923L18.716 4.57649L18.7951 4.51204Z"
+              fill="currentColor"
+            />
+          </svg>
+        </button>
+      </div>
+
+      <p class="mt-4 text-[14px]">
+        Нажимая "ОК" вы соглашаетесь с
+        <a
+          class="cursor-pointer text-[#00B000]"
+          href="/policy.pdf"
+          target="_blank"
+          >условиями</a
+        >
+        обработки Cookie и данных о поведении на сайте, нужных нам для
+        аналитики. Запретить обработку Cookie можно через браузер.
+      </p>
+
+      <button
+        id="cookie-btn"
+        class="text-foreground-1 bg-primary group relative mt-6 h-13 w-full cursor-pointer overflow-hidden rounded-xl px-6 whitespace-nowrap max-xl:h-[43px] max-xl:rounded-lg max-xl:px-3 max-xl:text-[14px]"
+      >
+        <div
+          class="group-hover:bg-foreground-1/10 group-active:bg-foreground-1/20 group-focus:bg-foreground-1/10 absolute top-0 right-0 bottom-0 left-0 transition-all duration-150"
+        ></div>
+        OK
+      </button>
+    </aside>
+
     <!-- Sidebar -->
     <aside
       id="sidebar"
@@ -19,8 +64,19 @@
       >
         <img class="h-6" src="./logo-full.svg" alt="logo" />
 
-        <button id="sidebar-close">
-          <img src="./cross.svg" alt="close" />
+        <button id="sidebar-close" class="text-surface-1 cursor-pointer">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M18.7951 4.51204C18.989 4.38428 19.2522 4.40605 19.423 4.57649C19.5939 4.7474 19.6157 5.0113 19.4874 5.2054L19.423 5.28353L12.7062 12.0003L19.423 18.7171L19.4874 18.7952C19.6156 18.9893 19.5938 19.2533 19.423 19.4242C19.2521 19.5947 18.989 19.6156 18.7951 19.4876L18.716 19.4242L11.9992 12.7064L5.28333 19.4232C5.08807 19.6184 4.77155 19.6184 4.5763 19.4232C4.38138 19.2279 4.38117 18.9113 4.5763 18.7161L11.2921 11.9993L4.5763 5.28353L4.51185 5.2054C4.38381 5.01135 4.40551 4.74731 4.5763 4.57649C4.74712 4.40569 5.01115 4.38401 5.20521 4.51204L5.28333 4.57649L11.9992 11.2923L18.716 4.57649L18.7951 4.51204Z"
+              fill="currentColor"
+            />
+          </svg>
         </button>
       </div>
 
@@ -1085,7 +1141,9 @@
 
             <button
               type="submit"
-              class="text-foreground-1 group bg-primary relative mt-12 h-[54px] w-full cursor-pointer overflow-hidden rounded-xl px-6 whitespace-nowrap max-lg:mt-6 max-lg:h-[43px] max-lg:rounded-lg max-lg:px-3 max-lg:text-[14px]"
+              id="submitBtn"
+              class="text-foreground-1 group bg-primary pointer-events-none relative mt-12 h-[54px] w-full cursor-not-allowed overflow-hidden rounded-xl px-6 whitespace-nowrap opacity-50 max-lg:mt-6 max-lg:h-[43px] max-lg:rounded-lg max-lg:px-3 max-lg:text-[14px]"
+              disabled
             >
               <div
                 class="group-hover:bg-foreground-1/10 group-active:bg-foreground-1/20 group-focus:bg-foreground-1/10 absolute top-0 right-0 bottom-0 left-0 transition-all duration-150"
@@ -1093,9 +1151,22 @@
               Подключить
             </button>
 
-            <p class="mt-4 text-center max-lg:mt-3 max-lg:text-[14px]">
-              Нажимая на кнопку «Отправить», вы подтверждаете
-              <a class="cursor-pointer text-[#00B000]" href="" target="_blank"
+            <p
+              class="mt-4 flex flex-wrap items-center justify-center gap-2 text-center max-lg:mt-3 max-lg:text-[14px]"
+            >
+              Подтверждаю
+
+              <label class="flex cursor-pointer items-center space-x-2">
+                <input id="agreeCheckbox" type="checkbox" class="peer hidden" />
+                <span
+                  class="peer-checked:before:text-surface-1 flex h-5 w-5 items-center justify-center rounded-sm border-2 border-[#00B000] transition-all peer-checked:border-[#00B000] peer-checked:bg-[#00B000] peer-checked:before:text-sm peer-checked:before:content-['✔']"
+                ></span>
+              </label>
+
+              <a
+                class="cursor-pointer text-[#00B000]"
+                href="/policy.pdf"
+                target="_blank"
                 >согласие на обработку персональных данных</a
               >
             </p>
@@ -1123,6 +1194,7 @@
                 +7 (800) 200-22-51
               </a>
             </div>
+
             <div class="flex flex-col items-start gap-1">
               <span class="text-foreground-2 max-lg:hidden">Почта</span>
               <a
@@ -1134,6 +1206,15 @@
           </div>
         </div>
 
+        <div class="text-foreground-2 mt-4 flex justify-end">
+          <span
+            class="text ml-auto w-[685px] max-lg:w-full max-lg:text-center max-lg:text-[14px]"
+          >
+            Краснодарский край, г. Краснодар,<br />ул. Северная, д. 450, помещ.
+            42
+          </span>
+        </div>
+
         <div
           class="text-foreground-2 mt-[96px] flex justify-between max-lg:mt-[24px] max-lg:flex-col max-lg:items-center max-lg:gap-1 max-lg:text-[14px]"
         >
@@ -1142,7 +1223,12 @@
           >
             <span>© 2025 ТопМаркет</span>
             <span class="max-lg:hidden">|</span>
-            <span>Политика конфиденциальности</span>
+            <a
+              class="cursor-pointer text-center underline"
+              href="/policy.pdf"
+              target="_blank"
+              >Политика в отношении обработки персональных данных</a
+            >
           </div>
 
           <span>Презентация проекта</span>
