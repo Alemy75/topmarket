@@ -50,17 +50,12 @@ ofertCheckbox.addEventListener('change', function () {
 
 // cookie
 const cookie = document.getElementById('cookie');
-const closeCookie = document.getElementById('cookie-close');
 const btnCookie = document.getElementById('cookie-btn');
 
 setTimeout(() => {
   cookie.classList.add('duration-500');
   cookie.classList.remove('translate-y-[150%]');
 }, 2000);
-
-closeCookie.addEventListener('click', () => {
-  cookie.classList.add('translate-y-[150%]');
-});
 
 btnCookie.addEventListener('click', () => {
   cookie.classList.add('translate-y-[150%]');
