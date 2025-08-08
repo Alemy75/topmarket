@@ -23,14 +23,29 @@ links.forEach((link) => {
 
 // form
 const checkbox = document.getElementById('agreeCheckbox');
+const ofertCheckbox = document.getElementById('ofertCheckbox');
 const submitBtn = document.getElementById('submitBtn');
 
 checkbox.addEventListener('change', function () {
+  const isDisabled = !this.checked || !ofertCheckbox.checked;
+
+  console.log(ofertCheckbox.checked);
+
+  submitBtn.disabled = isDisabled;
+  submitBtn.classList.toggle('opacity-50', isDisabled);
+  submitBtn.classList.toggle('cursor-not-allowed', isDisabled);
+  submitBtn.classList.toggle('cursor-pointer', isDisabled);
+  submitBtn.classList.toggle('pointer-events-none', isDisabled);
+});
+
+ofertCheckbox.addEventListener('change', function () {
+  const isDisabled = !this.checked || !checkbox.checked;
+
   submitBtn.disabled = !this.checked;
-  submitBtn.classList.toggle('opacity-50', !this.checked);
-  submitBtn.classList.toggle('cursor-not-allowed', !this.checked);
-  submitBtn.classList.toggle('cursor-pointer', this.checked);
-  submitBtn.classList.toggle('pointer-events-none', !this.checked);
+  submitBtn.classList.toggle('opacity-50', isDisabled);
+  submitBtn.classList.toggle('cursor-not-allowed', isDisabled);
+  submitBtn.classList.toggle('cursor-pointer', isDisabled);
+  submitBtn.classList.toggle('pointer-events-none', isDisabled);
 });
 
 // cookie

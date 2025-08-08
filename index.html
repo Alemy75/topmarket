@@ -1137,6 +1137,49 @@
               </div>
             </div>
 
+            <p
+              class="mt-8 flex items-center justify-start gap-2 max-lg:mt-4 max-lg:items-start max-lg:text-[14px]"
+            >
+              <label class="flex cursor-pointer items-center space-x-2">
+                <input id="agreeCheckbox" type="checkbox" class="peer hidden" />
+                <span
+                  class="peer-checked:border-primary peer-checked:bg-primary flex h-5 w-5 items-center justify-center rounded-sm border border-[#D1D1D1] bg-size-[70%] bg-center bg-no-repeat transition-all peer-checked:bg-[url('/check.svg')]"
+                >
+                </span>
+              </label>
+
+              <span>
+                Подтверждаю
+
+                <a
+                  class="cursor-pointer text-[#00B000]"
+                  href="/policy.pdf"
+                  target="_blank"
+                  >согласие на обработку персональных данных</a
+                >
+              </span>
+            </p>
+
+            <p
+              class="mt-4 flex items-center justify-start gap-2 max-lg:mt-4 max-lg:items-start max-lg:text-[14px]"
+            >
+              <label class="flex cursor-pointer items-center space-x-2">
+                <input id="ofertCheckbox" type="checkbox" class="peer hidden" />
+                <span
+                  class="peer-checked:border-primary peer-checked:bg-primary flex h-5 w-5 items-center justify-center rounded-sm border border-[#D1D1D1] bg-size-[70%] bg-center bg-no-repeat transition-all peer-checked:bg-[url('/check.svg')]"
+                >
+                </span>
+              </label>
+
+              <span>
+                Подтверждаю
+
+                <a class="cursor-pointer text-[#00B000]" target="_blank"
+                  >согласие с публичной офертой</a
+                >
+              </span>
+            </p>
+
             <button
               type="submit"
               id="submitBtn"
@@ -1148,26 +1191,6 @@
               ></div>
               Подключить
             </button>
-
-            <p
-              class="mt-4 flex flex-wrap items-center justify-center gap-2 text-center max-lg:mt-3 max-lg:text-[14px]"
-            >
-              Подтверждаю
-
-              <label class="flex cursor-pointer items-center space-x-2">
-                <input id="agreeCheckbox" type="checkbox" class="peer hidden" />
-                <span
-                  class="peer-checked:before:text-surface-1 flex h-5 w-5 items-center justify-center rounded-sm border-2 border-[#00B000] transition-all peer-checked:border-[#00B000] peer-checked:bg-[#00B000] peer-checked:before:text-sm peer-checked:before:content-['✔']"
-                ></span>
-              </label>
-
-              <a
-                class="cursor-pointer text-[#00B000]"
-                href="/policy.pdf"
-                target="_blank"
-                >согласие на обработку персональных данных</a
-              >
-            </p>
           </form>
         </div>
       </div>
